@@ -19,9 +19,6 @@ ENV KERNEL_BRANCH=4.4.11-ntc-1
 # kernel repo
 RUN cd /home/workspace && git clone --single-branch --branch debian/${KERNEL_BRANCH} https://github.com/NextThingCo/CHIP-linux.git
 
-# WiFi kernel module repo
-RUN cd /home/workspace && git clone --single-branch --branch debian https://github.com/NextThingCo/RTL8723BS.git
-
 ADD run.sh /home/workspace/
 
 WORKDIR /home/workspace
